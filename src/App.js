@@ -108,7 +108,7 @@ function App() {
       geocoder.coord2Address(latlng.La, latlng.Ma, (result, status) => {
         // 각각 경도, 위도, 콜백 함수를 인자로 사용한다.
         // 콜백함수의 첫번째 값은 좌표의 변환 결과, 두번째 값은 통신의 결과를 반환한다.
-        
+
         if (status === kakao.maps.services.Status.OK) {
           setAddress(result[0])
           // 이 때, 통신의 결과가 OK인 경우에 result에 변환 결과가 담겨오게 되므로,
@@ -134,7 +134,7 @@ function App() {
           <div className='title'>도로명 주소</div>
           <div className='info'>{address.road_address ? address.road_address.address_name : '없음'}</div>
           {/* 조건부 렌더링으로 주소가 있는 경우에만 해당 주소를 표시한다. */}
-          <div className='title'>직원 주소</div>
+          <div className='title'>지번 주소</div>
           <div className='info'>{address.address ? address.address.address_name : '없음'}</div>
           {/* 조건부 렌더링으로 주소가 있는 경우에만 해당 주소를 표시한다. */}
           {/* 조건부 렌더링 하는 이유는 도로명주소가 있는 경우도 있고, 없는 경우도 있기 때문에 위처럼 처리해주어야함. */}
